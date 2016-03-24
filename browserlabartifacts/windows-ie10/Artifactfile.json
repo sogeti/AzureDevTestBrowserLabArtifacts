@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "IE10",
+  "description": "Installs Internet Explorer 10",
+  "tags": [
+    "Windows"
+  ],
+  "iconUri": "https://chocolatey.org/content/packageimages/ie11.0.2.svg",
+  "targetOsType": "Windows",
+  "runCommand": {
+    "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startChocolatey.ps1 -PackageList ie10"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Opera",
+  "description": "Installs Opera",
+  "tags": [
+    "Windows"
+  ],
+  "iconUri": "https://chocolatey.org/content/packageimages/Opera.36.0.2130.32.svg",
+  "targetOsType": "Windows",
+  "runCommand": {
+    "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startChocolatey.ps1 -PackageList opera"
+  }
+}
