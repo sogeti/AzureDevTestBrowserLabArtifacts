@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Visual Studio Team Services Agent",
+  "description": "Downloads, intalls and configures the Visual Studio team Services build agent. In order to authenticate your agent as a member of Agent Pool Administrators group, you must have a PAT.",
+  "iconUri": "http://www.visualstudio.com/favicon.ico",
+  "targetOsType": "Windows",
+  "parameters": {
+    "vsoAccount": {
+      "type": "string",
+      "displayName": "VSTS Account URL",
+      "description": "The URL for the VSTS account, eg https://accountName.visualstudio.com/"
+    },
+      "vsoUser": {
+      "type": "string",
+      "displayName": "VSTS Username",
+      "description": "VSTS Username can be any name."
+    },
+    "vsoPass": {
+      "type": "securestring",
+      "displayName": "Personal Access Token",
+      "description": "VSTS Personal Access Token for registring the agent."
+    },
+    "vmName": {
+      "type": "string",
+      "displayName": "The friendly name to identify the agent on the server.",
+      "description": ""
+    },
+      "poolName": {
+      "type": "string",
+      "displayName": "The pool that will contain the agent.",
+      "description": ""
+    }
+  },
+  "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -Command InstallVSOAgent.ps1 -VSOAccount ', parameters('vsoAccount'), ' -VSOUser ', parameters('vsoUser'), ' -VSOPass ', parameters('vsoPass'), ' -AgentName ', parameters('vmName'), ' -PoolName ', parameters('poolName'))]"
+  }
+}
