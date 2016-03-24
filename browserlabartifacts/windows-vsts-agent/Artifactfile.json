@@ -32,6 +32,6 @@
     }
   },
   "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -Command InstallVSOAgent.ps1 -VSOAccount ', parameters('vsoAccount'), ' -VSOUser ', parameters('vsoUser'), ' -VSOPass ', parameters('vsoPass'), ' -AgentName ', parameters('vmName'), ' -PoolName ', parameters('poolName'))]"
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File InstallVSOAgent.ps1 -VSOAccount ', parameters('vsoAccount'), ' -VSOUser ', parameters('vsoUser'), ' -VSOPass ', parameters('vsoPass'), ' -AgentName ', parameters('vmName'), ' -PoolName ', parameters('poolName'))]"
   }
 }
