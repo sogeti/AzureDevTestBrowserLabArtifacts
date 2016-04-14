@@ -1,6 +1,6 @@
 
-# Downloads the Visual Studio Online Build Agent and installs on the new machine
-# and registers with the Visual Studio Online account and build agent pool
+# Downloads the Visual Studio Team Services Build Agent and installs on the new machine
+# and registers with the Visual Studio Team Services account and build agent pool
 
 # Enable -Verbose option
 [CmdletBinding()]
